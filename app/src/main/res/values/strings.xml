@@ -1,0 +1,45 @@
+<!--
+  ~ Created by Berk Orhan on 13.11.2020
+  ~ APPBeta Mobile | www.APPBeta.net | mobile@appbeta.net
+  ~
+  ~           YASAL UYARI
+  ~
+  ~                 Bu proje dosyasının herhangi bir amaç ile izinsiz olarak dağıtılması,
+  ~                 çoğaltılması, satılması ve izinsiz kullanılması yasaktır!
+  ~
+  ~                 İzinsiz kullanım, çoğaltımı, dağıtımı, satışı yapıldığı
+  ~                 tespit edilmesi halinde yasal yollara başvurulacaktır.
+  ~
+  ~                  Copyright (c)  2020. Berk Orhan. All rights reserved.
+  ~
+  -->
+<resources>
+    <string name="app_name">Video Games</string>
+
+
+    <string name="image">log_reg_image</string>
+    <string name="register">Sıgn Up</string>
+    <string name="create_acc">Create a new account</string>
+    <string name="login">Sıgn In</string>
+    <string name="login_acc">Login to your account</string>
+    <string name="keep_sign">Keep me signed</string>
+
+
+    <string name="name">Full Name</string>
+    <string name="eposta">E-mail Address</string>
+    <string name="cre_password">Create Password</string>
+    <string name="conf_password">Confirm Password</string>
+    <string name="password">Password</string>
+
+    <string name="allready_text">Allready have an account? </string>
+    <string name="sign_in_text">Sign In Now!</string>
+    <string name="no_account">Don\'t you have an account? </string>
+    <string name="no_account2">Sign up Now!</string>
+
+
+    <string name="profile_text">Profıle</string>
+    <string name="profile_update">Update</string>
+    <string name="new_password">New Password</string>
+
+
+</resources>
