@@ -16,7 +16,7 @@
 
 
 
-package ise308.orhan.berk.videogames
+package ise308.orhan.berk.kotlinhw2
 
 import android.content.Context
 import android.content.Intent
@@ -29,9 +29,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 
-class                          RegisterActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
 
-
+    // Variables, Objects
     lateinit var register : Button
     lateinit var eposta : EditText
     lateinit var full_name : EditText
@@ -44,12 +44,17 @@ class                          RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-        var actionbar = supportActionBar
-        actionbar?.hide()
 
+
+        // Actionbar definition
+        var actionbar = supportActionBar
+        actionbar?.hide() // Hiding ActionBar
+
+        // Creating, getting, editing SharedPreferences
         val prefences = getSharedPreferences(BuildConfig.APPLICATION_ID, Context.MODE_PRIVATE)
         val editor = prefences.edit()
 
+        // XML Object Definitions
         register = findViewById(R.id.register_button)
         full_name = findViewById(R.id.reg_fullname)
         eposta = findViewById(R.id.reg_eposta)
@@ -59,23 +64,30 @@ class                          RegisterActivity : AppCompatActivity() {
         sign_in = findViewById(R.id.register_login_button)
         register = findViewById(R.id.register_button)
 
+        // Whats happing when we click the sign-in button
         sign_in.setOnClickListener(){
-            onBackPressed()
+            onBackPressed() // Go back
         }
 
+        // Whats happing when we click the register button
         register.setOnClickListener(){
 
-            val new_user = create_Account(this,full_name.text.toString(), eposta.text.toString(), password.text.toString(), re_password.text.toString())
+            // Sending user input account information to CreateAccount class
+            val new_user = CreateAccount(this, full_name.text.toString(), eposta.text.toString(), password.text.toString(), re_password.text.toString())
 
+            // Checking if all the information needed is correct
             if (new_user.acc_check(password.text.toString(), re_password.text.toString()) == true &&
                     new_user.acc_check(eposta.text.toString()) == true &&
                     new_user.acc_check(full_name.text.toString()) == true) {
+
+                // If all the informations is correct then, add the info to SharedPreferences
                 editor.putString("s_fullname", new_user.name)
                 editor.putString("s_eposta", new_user.eposta)
                 editor.putString("s_password", new_user.password)
                 editor.apply()
                 Toast.makeText(this,"Full Name : ${new_user.name}\nE-Posta : ${new_user.eposta}\nPassword : ${new_user.password}", Toast.LENGTH_LONG).show()
-                startActivity(Intent(this,LoginActivity::class.java))
+                // Starting the Login Activity
+                startActivity(Intent(this, LoginActivity::class.java))
             }
 
 
@@ -87,10 +99,10 @@ class                          RegisterActivity : AppCompatActivity() {
 
 
 
+    // Function Overload Ex :
+    class CreateAccount(val context: Context, var name : String, var eposta : String, var password : String, var conf_password : String) {
 
-    class create_Account(val context: Context, var name : String, var eposta : String, var password : String, var conf_password : String) {
-
-
+        // Password Check Function
         fun acc_check(password : String, conf_password: String): Boolean {
 
             return when {
@@ -104,7 +116,7 @@ class                          RegisterActivity : AppCompatActivity() {
             }
        }
 
-
+        // E-posta check function
         fun acc_check(eposta: String): Boolean {
 
             return when {

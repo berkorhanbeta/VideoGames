@@ -14,7 +14,7 @@
   ~
   -->
 <resources>
-    <string name="app_name">Video Games</string>
+    <string name="app_name">KotlinHW2</string>
 
 
     <string name="image">log_reg_image</string>
@@ -40,6 +40,52 @@
     <string name="profile_text">Profıle</string>
     <string name="profile_update">Update</string>
     <string name="new_password">New Password</string>
+    <string name="password_not_match">Password or Mail Address Doesn\'t Match!</string>
+
+    <string name="current_Mail">Current Mail : </string>
+    <string name="current_Password">Current Password : </string>
+    <string name="look_at">Please look at the Logcat \nIf you want to change any details in this app\nGo to Strings.xml file. All the app values is in there.\nDo not edit any Kt files.</string>
+
+
+
+    <string name="bus">Bus</string>
+    <string name="busBrand">Mercedes</string>
+    <string name="doubleDecker">Yes</string>
+    <string name="busDamage">"Flat tires. Needs to be replaced.</string>
+    <string name="busDoor">2</string>
+    <string name="busRepairHour">5</string>
+
+
+    <string name="car">Car</string>
+    <string name="carBrand">BMW</string>
+    <string name="carConvertible">Yes</string>
+    <string name="carDamage">Overheated. Head gasket must be changed.</string>
+    <string name="carDoor">4</string>
+    <string name="carRepairHour">15</string>
+
+
+
+    <string name="bike">Bike</string>
+    <string name="bikeBrand">BMX</string>
+    <string name="bikeColor">Blue and Gray</string>
+    <string name="bikeDamage">Broken chain. Needs to be replanced.</string>
+    <string name="bikeRepairHour">3</string>
+
+
+    <!-- Do not edit this ! -->
+    <string name="busDamageIs">Bus damage is : </string>
+    <string name="busBrandIs">Bus brand is : </string>
+    <string name="busIsDoubleDecker">Bus is double decker? : </string>
+    <string name="HowManyDoor">How Many Door is have? : </string>
+
+    <string name="carDamageIs">The car damage is : </string>
+    <string name="carBrandIs">The car brand is : </string>
+    <string name="carIsConvertible">The car is convertible? : </string>
+
+    <string name="bikeDamageIs">Bike damage is : </string>
+    <string name="bikeBrandIs">Bike brand is : </string>
+    <string name="bikeColorIs">Bike color is : </string>
+
 
 
 </resources>

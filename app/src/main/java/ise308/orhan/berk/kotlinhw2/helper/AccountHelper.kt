@@ -16,15 +16,14 @@
 
 
 
-package ise308.orhan.berk.videogames.helper
+package ise308.orhan.berk.kotlinhw2.helper
 
-import android.content.Context
+
 import android.util.Log
-import android.widget.Toast
-import ise308.orhan.berk.videogames.LoginActivity
 
 class AccountHelper constructor() {
 
+    // Variables, Objects
     var system_mail: String = ""
     var system_password: String = ""
     var user_eposta: String = ""
@@ -49,37 +48,42 @@ class AccountHelper constructor() {
     }
 
 
-
+        // Login Info Check Function
     fun attempLogin(): Boolean {
 
         return when {
+            // If e-posta and password not corret
             !system_mail.equals(user_eposta) || !system_password.equals(user_password) -> {
-
+                // Then do this
                 Log.i("LoginHelper : ", "Password or Mail Address Wrong!")
                 Log.i("LoginHelper  UserID : ", user_eposta)
                 Log.i("LoginHelper UserPass: ", user_password)
                 Log.i("LoginHelper SMail : ", system_mail)
                 Log.i("LoginHelper SPass : ", system_password)
+                // Boolen return false
                 false
             }
-
+            // If correct, then boolen return true
             else -> true
         }
     }
 
 
+    // Account Password Changer
     fun changePassword(): Boolean {
 
 
         return when {
+            // If current password not correct
             !user_password.equals(system_password) -> {
-
+                    // Then do this
                 Log.i("LoginHelper : ", "Old Password Is Wrong!")
                 Log.i("LoginHelper  SPass : ", user_password)
                 Log.i("LoginHelper UPass: ", system_password)
+                // Boolen return false
                 false
             }
-
+            // If password is correct, then boolen return true
             else -> true
         }
     }

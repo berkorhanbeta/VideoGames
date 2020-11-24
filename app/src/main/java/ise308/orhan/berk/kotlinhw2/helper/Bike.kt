@@ -16,7 +16,7 @@
 
 
 
-package ise308.orhan.berk.videogames.helper
+package ise308.orhan.berk.kotlinhw2.helper
 
 import android.util.Log
 
@@ -24,10 +24,30 @@ class Bike(vehicleType : String, vehicleRepairHour : Int): ServiceCalculator(veh
 
 
     init {
-        Log.i("@@ Bike","Vehicle Type is "+vehicleType+" and vehicle damage repair hour is : "+vehicleRepairHour)
+        Log.i(Companion.TAG,"Vehicle Type is "+vehicleType+" and vehicle damage repair hour is : "+vehicleRepairHour)
     }
 
+    // Towing Function
     override fun isNeedTow() {
-            Log.i("@@ Bike","Needs to be towing, Tow Price is $50")
+            Log.i(Companion.TAG,"Needs to be towing, Tow Price is $50")
+    }
+
+    // Objects, Variables
+    var brand: String = ""
+    var damage : String = ""
+    var color : String = ""
+
+        // Get Method
+        get() {
+            return field.toString()
+        }
+
+        // Set Method
+        set(value) {
+            field = value
+        }
+
+    companion object {
+        const val TAG = "@@ Bike"
     }
 }

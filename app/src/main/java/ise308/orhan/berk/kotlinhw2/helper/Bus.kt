@@ -16,18 +16,38 @@
 
 
 
-package ise308.orhan.berk.videogames.helper
+package ise308.orhan.berk.kotlinhw2.helper
 
 import android.util.Log
 
 class Bus(vehicleType : String, vehicleRepairHour : Int) : ServiceCalculator(vehicleType, vehicleRepairHour) {
 
     init {
-        Log.i("@@ Bus","Vehicle Type is "+vehicleType+" and vehicle damage repair hour is : "+vehicleRepairHour)
+        Log.i(Companion.TAG,"Vehicle Type is "+vehicleType+" and vehicle damage repair hour is : "+vehicleRepairHour)
     }
 
-
+    // Towing Function
     override fun isNeedTow() {
-        Log.i("@@ Bus","Needs to be towing, Tow Price is $800")
+        Log.i(Companion.TAG,"Needs to be towing, Tow Price is $800")
+    }
+
+    // Objects, Variables
+    var brand: String = ""
+    var door : String = ""
+    var doubleDecker : String = ""
+    var damage : String = ""
+
+        // Get Method
+        get() {
+            return field.toString()
+        }
+
+        // Set Method
+        set(value) {
+            field = value
+        }
+
+    companion object {
+        const val TAG = "@@ Bus"
     }
 }
